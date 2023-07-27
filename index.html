@@ -10,43 +10,42 @@
     <link rel="stylesheet" href="assets/css/tailwind.custom.css">
 </head>
 <body class="bg-primary-50">
-    <main>
-        <nav class="bg-white shadow fixed top-0 w-full" id="nav">
-            <div class="px-4 md:px-[120px] py-2 flex justify-between items-center">
-                <!-- Brand (Logo) -->
-                <a class="flex-1 items-center" href="#">
-                    <img src="assets/images/logo.png" alt="Logo" class="w-auto h-10 mr-2">
-                </a>
+    <nav class="bg-white shadow fixed top-0 w-full" id="nav">
+        <div class="px-4 md:px-[120px] py-2 flex justify-between items-center">
+            <!-- Brand (Logo) -->
+            <a class="flex-1 items-center" href="#">
+                <img src="assets/images/logo.png" alt="Logo" class="w-auto h-10 mr-2">
+            </a>
 
-                <!-- Toggler untuk menu responsif -->
-                <div class="md:hidden">
-                    <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
-                        onclick="toggleMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7">
-                            </path>
-                        </svg>
-                        <span class="hidden">toggle</span>
-                    </button>
-                </div>
-
-                <div class="hidden md:flex md:items-center md:space-x-4">
-                    <a href="#" class="active block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
-                    <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Tentang Kami</a>
-                    <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Layanan</a>
-                    <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kontak</a>
-                </div>
+            <!-- Toggler untuk menu responsif -->
+            <div class="md:hidden">
+                <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
+                    onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                    <span class="hidden">toggle</span>
+                </button>
             </div>
-            <div class="hidden md:hidden md:flex md:items-center space-y-4 px-4 pb-4" id="menu">
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
+
+            <div class="hidden md:flex md:items-center md:space-x-4">
+                <a href="#" class="active block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
                 <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Tentang Kami</a>
                 <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Layanan</a>
                 <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kontak</a>
             </div>
-        </nav>
-
+        </div>
+        <div class="hidden md:hidden md:flex md:items-center space-y-4 px-4 pb-4" id="menu">
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Tentang Kami</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Layanan</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kontak</a>
+        </div>
+    </nav>
+    <main>
         <section class="h-[calc(100vh-70px)] mt-[50px] w-full flex items-center px-4 md:px-[120px]">
             <div class="flex-col-reverse flex md:justify-between w-full md:flex-row flex-col items-center">
                 <div class="flex flex-1 flex-col">
@@ -332,8 +331,219 @@
                     <p class="text-[21px] text-dark">Satukan hati untuk pulang bersama menuju Ka’Bah.</p>
                 </div>
                 <img src="assets/images/candidate.png" class="w-full md:w-[440px] m-4 md:m-0" title="candidate">
+            </div>
+        </section>
+
+        <section
+            class="w-full flex md:items-center md:justify-between flex-col md:flex-row px-4 md:px-[120px] md:py-[128px] py-4">
+            <div class="flex flex-1 items-center justify-center">
+                <img src="assets/images/banner.jpeg" class="rounded-3xl max-w-full md:max-w-[380px]" title="banner">
+            </div>
+            <div class="flex flex-1 flex-col space-y-4 mt-4 md:mt-0 md:space-y-12">
+                <div class="w-full bg-primary-500 rounded-3xl p-4 md:p-6">
+                    <h1 class="text-[48px] text-white font-semibold">Pendidikan</h1>
+                    <ul class="list-disc text-white text-[21px] mx-6">
+                        <li>S3 AEU Asia E University Malaysia (Kandidat)</li>
+                        <li>S2 Teknik Informatika - STTI Benarif Jakarta</li>
+                        <li>S1 Pendidikan Bahasa Indonesia - STKIP 11 April (UNSAP)</li>
+                        <li>D3 Pendidikan Seni Musik - IKIP Bandung</li>
+                        <li>SMAN Tanjungsari</li>
+                        <li>SMPN 1 Sumedang</li>
+                        <li>SDN Panyingkiran Sumedang</li>
+                    </ul>
+                </div>
+                <div class="w-full bg-white rounded-3xl p-4 md:p-6">
+                    <h1 class="text-[48px] text-dark font-semibold">Pengalaman</h1>
+                    <p class="text-[21px] font-semibold text-dark">2010 - Sekarang</p>
+                    <ul class="list-disc text-dark text-[21px] mr-6 ml-8">
+                        <li>Sekarang Sekretaris yayasan Pendidikan KORPRI</li>
+                        <li>Ketua Pengurus Yayasan Pendidikan Sumedang</li>
+                        <li>Pembina YASPRI</li>
+                        <li>Pembina YPSA Sumedang</li>
+                    </ul>
+
+                    <p class="text-[21px] font-semibold mt-4 text-dark">2000 - 2010</p>
+                    <ul class="list-disc text-dark text-[21px] mr-6 ml-8">
+                        <li>Wakil Ketua II STIE Sebelas April</li>
+                        <li>Wakil Ketua III STMIK Sumedang</li>
+                    </ul>
+                </div>
 
             </div>
+        </section>
+
+        <section class="bg-white w-full flex flex-col px-4 md:px-[120px] md:py-[128px] py-4">
+            <h1 class="text-primary-800 text-[48px] font-semibold">Kegiatan</h1>
+            <p class="text-dark text-[21px] mt-4">Informasi terkait kegiatan yang dilakukan</p>
+            <div class="overflow-x-auto md:overflow-x-hidden w-full">
+                <div
+                    class="w-fit md:w-full flex flex-row md:grid md:grid-rows-1 md:grid-rows-2 md:grid-cols-4 md:gap-4 space-x-4 md:space-x-0 mt-4">
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+                    <div
+                        class="w-[calc(100vw-100px)] md:w-auto bg-white rounded-xl article-shadow p-4 border-2 border-white hover:border-primary-300">
+                        <img src="https://s3-alpha-sig.figma.com/img/2217/114a/052a6a22ed7078285261e30428fe5e9d?Expires=1691366400&Signature=Tk5HpfSmWk-3OEn2pPrprBPq6dFoxV1adUtFnC175TyvRrdasclfKFGcQnch1Eu0iO6siB2PHsK9WTiVoYk2CQgK1G-1siDoHBR3N4udVMJKb74inZWrZRGjVLN7nyTceBQUT~ge8HAB1KUC0UfJN2xASu7u9D8DRzWqsMyN-BZ-Oeqvtl3ASb7SZ1c2hIwMWzTbh8L0wVqSW0ixt81xCV8D1OpAOggS-sbiDZo7fI42iODczGgpmhkxKmbAz7dWj1evKkBHWhi3BA6jU8C4pZ6azbJlb0I6m63l6Y9gusfKDA7gcIyxdwuk0RqyOyUbrKtZn8Z52oymBZhqtCQFMA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="content-img" class="aspect-[4/3] rounded-xl bg-gray-100 w-full object-cover">
+                        <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
+                            Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
+                        </h1>
+                        <p class="text-dark text-base line-clamp-2">
+                            Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
+                            lagi. Setiap tanggal 17
+                            Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
+                            bangsa
+                            ini. Perayaan HUT RI bukan
+                            hanya tentang pesta dan kemeriahan semata, melainkan tentang semangat kemerdekaan yang tak
+                            tergoyahkan, perjuangan para
+                            pahlawan, dan tekad untuk terus memajukan negeri ini.
+                        </p>
+
+                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                            Selengkapnya
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
         </section>
     </main>
     <script>
