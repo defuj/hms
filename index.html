@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,21 +32,22 @@
             </div>
 
             <div class="hidden md:flex md:items-center md:space-x-4">
-                <a href="#" class="block mt-4 active md:inline-block md:mt-0 text-primary-800">Beranda</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
+                <a href="#home" class="block mt-4 active md:inline-block md:mt-0 text-primary-800">Beranda</a>
+                <a href="#profile" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
+                <a href="#kegiatan" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
+                <a href="#galleri" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
             </div>
         </div>
         <div class="hidden px-4 pb-4 space-y-4 md:hidden md:flex md:items-center" id="menu">
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
+            <a href="#home" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
+            <a href="#profile" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
+            <a href="#kegiatan" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
+            <a href="#galleri" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
         </div>
     </nav>
     <main>
-        <section class="h-[calc(100vh-70px)] mt-[50px] w-full flex items-center px-4 md:px-[120px]">
+        <section id="home"
+            class="h-[calc(100vh-70px)] mt-[50px] w-full flex items-center px-4 py-6 md:py-0 md:px-[120px]">
             <div
                 class="flex flex-col flex-col-reverse items-center justify-around w-full md:justify-between md:flex-row">
                 <div class="flex flex-col flex-1">
@@ -330,15 +331,17 @@
                         </span>
                     </h1>
                     <p class="text-[21px] text-dark">Satukan hati untuk pulang bersama menuju Ka’Bah.</p>
-                    <button class="px-4 py-2 mt-16 text-base text-white rounded-xl bg-primary-500 w-fit">Lihat
-                        Profil</button>
+                    <button
+                        class="px-6 py-2 mt-6 text-lg text-white rounded-lg md:mt-16 md:rounded-xl bg-primary-500 w-fit">
+                        Lihat Profil
+                    </button>
                 </div>
                 <img src="assets/images/candidate.png" class="w-full md:w-[440px] m-4 md:m-0" title="candidate">
             </div>
         </section>
 
-        <section
-            class="w-full flex md:items-center md:justify-between flex-col md:flex-row px-4 md:px-[120px] md:py-[128px] py-4">
+        <section id="profile"
+            class=" py-6 md:py-0 w-full flex md:items-center md:justify-between flex-col md:flex-row px-4 md:px-[120px] md:py-[128px] py-4">
             <div class="flex items-center justify-center flex-1">
                 <img src="assets/images/banner.jpeg" class="rounded-3xl max-w-full md:max-w-[380px]" title="banner">
             </div>
@@ -375,7 +378,7 @@
             </div>
         </section>
 
-        <section class="bg-white w-full flex flex-col md:px-[120px] md:py-[128px] py-4">
+        <section id="kegiatan" class=" py-6 md:py-0 bg-white w-full flex flex-col md:px-[120px] md:py-[128px] py-4">
             <h1 class="text-primary-800 text-[48px] px-4 font-semibold">Kegiatan</h1>
             <p class="text-dark text-[21px] mt-4 px-4">Informasi terkait kegiatan yang dilakukan</p>
             <div class="w-full overflow-x-auto md:overflow-x-hidden md:px-4">
@@ -572,7 +575,7 @@
             </div>
         </section>
 
-        <section class="w-full flex flex-col px-4 md:px-[120px] md:py-[128px] py-4">
+        <section id="galleri" class=" py-6 md:py-0  w-full flex flex-col px-4 md:px-[120px] md:py-[128px] py-4">
             <h1 class="text-primary-800 text-[48px] font-semibold">Galleri</h1>
             <p class="text-dark text-[21px] mt-4">Dokumentasi kegiatan H. Mulya Suryadi</p>
             <div class="w-full gap-4 mt-4 space-y-4 columns-3">
