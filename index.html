@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="assets/css/tailwind.custom.css">
 </head>
 <body class="bg-primary-50">
-    <nav class="bg-white shadow fixed top-0 w-full" id="nav">
-        <div class="px-4 md:px-[120px] py-2 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-white shadow" id="nav">
+        <div class="px-4 py-3 md:px-[120px] py-2 flex justify-between items-center">
             <!-- Brand (Logo) -->
-            <a class="flex-1 items-center" href="#">
+            <a class="items-center flex-1" href="#">
                 <img src="assets/images/logo.png" alt="Logo" class="w-auto h-10 mr-2">
             </a>
 
@@ -32,27 +32,27 @@
             </div>
 
             <div class="hidden md:flex md:items-center md:space-x-4">
-                <a href="#" class="active block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Tentang Kami</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Layanan</a>
-                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kontak</a>
+                <a href="#" class="block mt-4 active md:inline-block md:mt-0 text-primary-800">Beranda</a>
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
             </div>
         </div>
-        <div class="hidden md:hidden md:flex md:items-center space-y-4 px-4 pb-4" id="menu">
+        <div class="hidden px-4 pb-4 space-y-4 md:hidden md:flex md:items-center" id="menu">
             <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Beranda</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Tentang Kami</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Layanan</a>
-            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kontak</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Profil</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Kegiatan</a>
+            <a href="#" class="block mt-4 md:inline-block md:mt-0 text-primary-800">Galleri</a>
         </div>
     </nav>
     <main>
         <section class="h-[calc(100vh-70px)] mt-[50px] w-full flex items-center px-4 md:px-[120px]">
             <div
-                class="flex-col-reverse flex md:justify-between justify-around w-full md:flex-row flex-col items-center">
-                <div class="flex flex-1 flex-col">
+                class="flex flex-col flex-col-reverse items-center justify-around w-full md:justify-between md:flex-row">
+                <div class="flex flex-col flex-1">
                     <h1 class="text-[48px] text-primary-800 font-bold flex flex-row items-center">
                         #Satu Tujuan Mulya
-                        <span class="hidden md:block ml-4 bg-primary-100 rounded-full px-4 py-2">
+                        <span class="hidden px-4 py-2 ml-4 rounded-full md:block bg-primary-100">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path
                                     d="M22.5 6.29C22.4999 6.25247 22.4886 6.21582 22.4675 6.1848C22.4463 6.15378 22.4164 6.12981 22.3815 6.116L12 2.03V22.97L22.3807 18.8915C22.4158 18.8778 22.4459 18.8539 22.4672 18.8229C22.4884 18.7918 22.4999 18.7551 22.5 18.7175V6.29Z"
@@ -337,11 +337,11 @@
 
         <section
             class="w-full flex md:items-center md:justify-between flex-col md:flex-row px-4 md:px-[120px] md:py-[128px] py-4">
-            <div class="flex flex-1 items-center justify-center">
+            <div class="flex items-center justify-center flex-1">
                 <img src="assets/images/banner.jpeg" class="rounded-3xl max-w-full md:max-w-[380px]" title="banner">
             </div>
-            <div class="flex flex-1 flex-col space-y-4 mt-4 md:mt-0 md:space-y-12">
-                <div class="w-full bg-primary-500 rounded-3xl p-4 md:p-6">
+            <div class="flex flex-col flex-1 mt-4 space-y-4 md:mt-0 md:space-y-12">
+                <div class="w-full p-4 bg-primary-500 rounded-3xl md:p-6">
                     <h1 class="text-[48px] text-white font-semibold">Pendidikan</h1>
                     <ul class="list-disc text-white text-[21px] mx-6">
                         <li>S3 AEU Asia E University Malaysia (Kandidat)</li>
@@ -353,7 +353,7 @@
                         <li>SDN Panyingkiran Sumedang</li>
                     </ul>
                 </div>
-                <div class="w-full bg-white rounded-3xl p-4 md:p-6">
+                <div class="w-full p-4 bg-white rounded-3xl md:p-6">
                     <h1 class="text-[48px] text-dark font-semibold">Pengalaman</h1>
                     <p class="text-[21px] font-semibold text-dark">2010 - Sekarang</p>
                     <ul class="list-disc text-dark text-[21px] mr-6 ml-8">
@@ -376,9 +376,9 @@
         <section class="bg-white w-full flex flex-col md:px-[120px] md:py-[128px] py-4">
             <h1 class="text-primary-800 text-[48px] px-4 font-semibold">Kegiatan</h1>
             <p class="text-dark text-[21px] mt-4 px-4">Informasi terkait kegiatan yang dilakukan</p>
-            <div class="overflow-x-auto md:overflow-x-hidden md:px-4 w-full">
+            <div class="w-full overflow-x-auto md:overflow-x-hidden md:px-4">
                 <div
-                    class="w-fit md:w-full flex flex-row md:grid md:grid-rows-1 md:grid-rows-2 md:grid-cols-4 md:gap-4 gap-0 space-x-4 md:space-x-0 mt-4">
+                    class="flex flex-row gap-0 mt-4 space-x-4 w-fit md:w-full md:grid md:grid-rows-1 md:grid-rows-2 md:grid-cols-4 md:gap-4 md:space-x-0">
 
 
                     <div
@@ -388,7 +388,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -399,7 +399,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -411,7 +411,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -422,7 +422,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -434,7 +434,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -445,7 +445,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -457,7 +457,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -468,7 +468,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -480,7 +480,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -491,7 +491,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -503,7 +503,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -514,7 +514,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -526,7 +526,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -537,7 +537,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -549,7 +549,7 @@
                         <h1 class="text-dark text-[20px] font-medium line-clamp-1 my-4">
                             Menyambut Perayaan HUT RI ke-78: Semangat Kemerdekaan yang Tak Tergoyahkan
                         </h1>
-                        <p class="text-dark text-base line-clamp-2">
+                        <p class="text-base text-dark line-clamp-2">
                             Tidak terasa, perayaan Hari Ulang Tahun Republik Indonesia yang ke-78 tinggal beberapa hari
                             lagi. Setiap tanggal 17
                             Agustus, kita sebagai warga negara Indonesia, merayakan momentum penting dalam sejarah
@@ -560,7 +560,7 @@
                             pahlawan, dan tekad untuk terus memajukan negeri ini.
                         </p>
 
-                        <button class="bg-primary-500 text-white text-base w-fit rounded-lg px-4 py-2 mt-4">
+                        <button class="px-4 py-2 mt-4 text-base text-white rounded-lg bg-primary-500 w-fit">
                             Selengkapnya
                         </button>
                     </div>
@@ -573,7 +573,7 @@
         <section class="w-full flex flex-col px-4 md:px-[120px] md:py-[128px] py-4">
             <h1 class="text-primary-800 text-[48px] font-semibold">Galleri</h1>
             <p class="text-dark text-[21px] mt-4">Dokumentasi kegiatan H. Mulya Suryadi</p>
-            <div class="columns-3 w-full mt-4 gap-4 space-y-4">
+            <div class="w-full gap-4 mt-4 space-y-4 columns-3">
                 <img src="assets/images/image-1.png" alt="" class="rounded-lg">
                 <img src="assets/images/image-2.png" alt="" class="rounded-lg">
                 <img src="assets/images/image-3.png" alt="" class="rounded-lg">
@@ -583,10 +583,10 @@
             </div>
         </section>
     </main>
-    <footer class="bg-primary-800 flex flex-col md:flex-row md:justify-around items-center justify-center py-6 px-6">
-        <p class="text-sm text-white text-center md:text-left md:order-1 order-3">©2023 - H. Mulya Suryadi</p>
+    <footer class="flex flex-col items-center justify-center px-6 py-6 bg-primary-800 md:flex-row md:justify-around">
+        <p class="order-3 text-sm text-center text-white md:text-left md:order-1">©2023 - H. Mulya Suryadi</p>
         <img src="assets/images/logo-white.png" alt="logo" class="h-[48px] w-[189px] md:order-2 order-1">
-        <div class="flex flex-row space-x-4 md:order-2 order-2 md:my-0 my-4">
+        <div class="flex flex-row order-2 my-4 space-x-4 md:order-2 md:my-0">
             <a href="#" class="text-white">
                 <span class="hidden">facebook</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
