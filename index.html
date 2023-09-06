@@ -17,8 +17,33 @@
     <script src="assets/js/components.js" defer></script>
 
 </head>
-<body class="relative bg-primary-50">
+<body class="relative overflow-x-hidden bg-primary-50">
     <nav class="fixed top-0 z-20 w-full bg-white shadow" id="nav">
+        <div id="banner"
+            class="relative isolate flex items-center gap-x-6 overflow-hidden bg-primary-500 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <p class="text-sm leading-6 text-white">
+                    <strong class="font-semibold">Apakah kamu terpilih?</strong><svg viewBox="0 0 2 2"
+                        class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+                        <circle cx="1" cy="1" r="1" />
+                    </svg>Lihat daftar pemenang undian bulan ini!
+                </p>
+                <button type="button" onclick="openWinnerDialog()"
+                    class="flex-none rounded-full bg-primary-300 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
+                    Lihat Pemenang <span aria-hidden="true">&rarr;</span>
+                </button>
+            </div>
+            <div class="flex justify-end flex-1">
+                <button onclick="closeBanner()" type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+                    <span class="sr-only">Dismiss</span>
+                    <svg class="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
         <div class="px-4 py-3 md:px-[120px] py-2 flex justify-between items-center">
             <!-- Brand (Logo) -->
             <a class="items-center flex-1" href="#">
@@ -106,6 +131,66 @@
             Daftar Relawan
         </button>
     </div>
+
+    <!-- <div id="winner" class="fixed top-0 z-[21] w-full h-screen">
+        <div class="relative flex flex-col items-center justify-center w-full h-full">
+            <div class="absolute z-[22] w-full h-full bg-black opacity-80 backdrop-blur-lg"></div>
+            <div class="z-[23] flex flex-col w-full md:w-[600px] bg-white rounded-2xl overflow-hidden max-h-[100%]">
+                <div class="flex justify-between p-4 space-x-4">
+                    <h1 class="flex-1 text-xl font-semibold text-primary-800">Daftar Pemenang:</h1>
+                    <button onclick="closeWinnerDialog()" type="button" class="text-gray-600 focus:outline-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M10.0302 8.97C9.88798 8.83752 9.69993 8.7654 9.50563 8.76883C9.31133 8.77225 9.12595 8.85097 8.98853 8.98838C8.85112 9.12579 8.77241 9.31118 8.76898 9.50548C8.76555 9.69978 8.83767 9.88783 8.97015 10.03L10.9402 12L8.97015 13.97C8.89647 14.0387 8.83736 14.1215 8.79637 14.2135C8.75538 14.3055 8.73334 14.4048 8.73156 14.5055C8.72979 14.6062 8.74831 14.7062 8.78603 14.7996C8.82375 14.893 8.8799 14.9778 8.95112 15.049C9.02233 15.1203 9.10717 15.1764 9.20056 15.2141C9.29394 15.2518 9.39397 15.2704 9.49468 15.2686C9.59538 15.2668 9.69469 15.2448 9.78669 15.2038C9.87869 15.1628 9.96149 15.1037 10.0302 15.03L12.0002 13.06L13.9702 15.03C14.1123 15.1625 14.3004 15.2346 14.4947 15.2312C14.689 15.2277 14.8744 15.149 15.0118 15.0116C15.1492 14.8742 15.2279 14.6888 15.2313 14.4945C15.2348 14.3002 15.1626 14.1122 15.0302 13.97L13.0602 12L15.0302 10.03C15.1038 9.96134 15.1629 9.87854 15.2039 9.78654C15.2449 9.69454 15.267 9.59523 15.2687 9.49452C15.2705 9.39382 15.252 9.29379 15.2143 9.2004C15.1766 9.10702 15.1204 9.02218 15.0492 8.95096C14.978 8.87974 14.8931 8.8236 14.7998 8.78588C14.7064 8.74816 14.6063 8.72963 14.5056 8.73141C14.4049 8.73319 14.3056 8.75523 14.2136 8.79622C14.1216 8.83721 14.0388 8.89631 13.9702 8.97L12.0002 10.94L10.0302 8.97Z"
+                                fill="#151617" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12C1.25 17.937 6.063 22.75 12 22.75C17.937 22.75 22.75 17.937 22.75 12C22.75 6.063 17.937 1.25 12 1.25ZM2.75 12C2.75 9.54675 3.72455 7.19397 5.45926 5.45926C7.19397 3.72455 9.54675 2.75 12 2.75C14.4533 2.75 16.806 3.72455 18.5407 5.45926C20.2754 7.19397 21.25 9.54675 21.25 12C21.25 14.4533 20.2754 16.806 18.5407 18.5407C16.806 20.2754 14.4533 21.25 12 21.25C9.54675 21.25 7.19397 20.2754 5.45926 18.5407C3.72455 16.806 2.75 14.4533 2.75 12Z"
+                                fill="#151617" />
+                        </svg>
+                        <span class="hidden">toggle</span>
+                    </button>
+                </div>
+                <ul class="grid grid-cols-2 gap-4 px-4 pb-4 overflow-x-hidden overflow-y-auto list-decimal">
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+
+
+                </ul>
+                <div class="flex flex-col px-4 py-4 bg-primary-50">
+                    <h1 class="font-medium text-dark font-base">Catatan</h1>
+                    <p class="text-sm text-dark">Silahkan hubungi admin melalui whatsaap, untuk klaim hadiah.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <main>
         <section id="home"
@@ -763,6 +848,16 @@
             }
         }
 
+        function closeBanner() {
+            var banner = document.getElementById("banner");
+            banner.remove();
+        }
+
+        function closeWinnerDialog() {
+            var dialog = document.getElementById("winner");
+            dialog.remove();
+        }
+
         function changeActiveWhenScroll() {
             var scrollPosition = window.scrollY;
             var menu = document.getElementsByClassName("menu");
@@ -777,6 +872,69 @@
                     menu[i].classList.add("active");
                 }
             }
+        }
+
+        function openWinnerDialog() {
+            var body = document.body;
+            body.innerHTML += `<div id="winner" class="fixed top-0 z-[21] w-full h-screen">
+        <div class="relative flex flex-col items-center justify-center w-full h-full">
+            <div class="absolute z-[22] w-full h-full bg-black opacity-80 backdrop-blur-lg"></div>
+            <div class="z-[23] flex flex-col w-full md:w-[600px] bg-white rounded-2xl overflow-hidden max-h-[100%]">
+                <div class="flex justify-between p-4 space-x-4">
+                    <h1 class="flex-1 text-xl font-semibold text-primary-800">Daftar Pemenang:</h1>
+                    <button onclick="closeWinnerDialog()" type="button" class="text-gray-600 focus:outline-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M10.0302 8.97C9.88798 8.83752 9.69993 8.7654 9.50563 8.76883C9.31133 8.77225 9.12595 8.85097 8.98853 8.98838C8.85112 9.12579 8.77241 9.31118 8.76898 9.50548C8.76555 9.69978 8.83767 9.88783 8.97015 10.03L10.9402 12L8.97015 13.97C8.89647 14.0387 8.83736 14.1215 8.79637 14.2135C8.75538 14.3055 8.73334 14.4048 8.73156 14.5055C8.72979 14.6062 8.74831 14.7062 8.78603 14.7996C8.82375 14.893 8.8799 14.9778 8.95112 15.049C9.02233 15.1203 9.10717 15.1764 9.20056 15.2141C9.29394 15.2518 9.39397 15.2704 9.49468 15.2686C9.59538 15.2668 9.69469 15.2448 9.78669 15.2038C9.87869 15.1628 9.96149 15.1037 10.0302 15.03L12.0002 13.06L13.9702 15.03C14.1123 15.1625 14.3004 15.2346 14.4947 15.2312C14.689 15.2277 14.8744 15.149 15.0118 15.0116C15.1492 14.8742 15.2279 14.6888 15.2313 14.4945C15.2348 14.3002 15.1626 14.1122 15.0302 13.97L13.0602 12L15.0302 10.03C15.1038 9.96134 15.1629 9.87854 15.2039 9.78654C15.2449 9.69454 15.267 9.59523 15.2687 9.49452C15.2705 9.39382 15.252 9.29379 15.2143 9.2004C15.1766 9.10702 15.1204 9.02218 15.0492 8.95096C14.978 8.87974 14.8931 8.8236 14.7998 8.78588C14.7064 8.74816 14.6063 8.72963 14.5056 8.73141C14.4049 8.73319 14.3056 8.75523 14.2136 8.79622C14.1216 8.83721 14.0388 8.89631 13.9702 8.97L12.0002 10.94L10.0302 8.97Z"
+                                fill="#151617" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12C1.25 17.937 6.063 22.75 12 22.75C17.937 22.75 22.75 17.937 22.75 12C22.75 6.063 17.937 1.25 12 1.25ZM2.75 12C2.75 9.54675 3.72455 7.19397 5.45926 5.45926C7.19397 3.72455 9.54675 2.75 12 2.75C14.4533 2.75 16.806 3.72455 18.5407 5.45926C20.2754 7.19397 21.25 9.54675 21.25 12C21.25 14.4533 20.2754 16.806 18.5407 18.5407C16.806 20.2754 14.4533 21.25 12 21.25C9.54675 21.25 7.19397 20.2754 5.45926 18.5407C3.72455 16.806 2.75 14.4533 2.75 12Z"
+                                fill="#151617" />
+                        </svg>
+                        <span class="hidden">toggle</span>
+                    </button>
+                </div>
+                <ul class="grid grid-cols-2 gap-4 px-4 pb-4 overflow-x-hidden overflow-y-auto list-decimal">
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark ">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+                    <li class="items-center mx-4 space-x-2 text-base text-dark">
+                        Asep Sunarya <span class="text-sm text-gray-500">(0878292***99)</span>
+                    </li>
+
+
+                </ul>
+                <div class="flex flex-col px-4 py-4 bg-primary-50">
+                    <h1 class="font-medium text-dark font-base">Catatan</h1>
+                    <p class="text-sm text-dark">Silahkan hubungi admin melalui whatsaap, untuk klaim hadiah.</p>
+                </div>
+            </div>
+        </div>
+    </div>`;
         }
 
         document.addEventListener("scroll", changeActiveWhenScroll);
